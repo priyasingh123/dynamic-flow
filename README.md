@@ -1,5 +1,5 @@
 # About Project Idea
-This POC summarizes my work at UBS while I was working at frontend.
+This POC summarizes my work at UBS while I was working at frontend.\
 Of course, it is very simplified version
 
 # Getting Started with Create React App
