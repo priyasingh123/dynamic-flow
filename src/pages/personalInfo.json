@@ -1,0 +1,28 @@
+{
+	"title": "Personal Information",
+	"content": [{
+			"type": "textbox",
+			"label": "Name"
+		},
+		{
+			"type": "date",
+			"label": "Date of Birth"
+		},
+        {
+			"type": "dropdown",
+			"label": "Nationality",
+			"options": ["","Indian", "Russian", "German", "French"]
+		},
+        {
+			"type": "checkbox",
+			"label": "Hobbies",
+			"options": ["Singing", "Dancing", "Travelling", "Reading", "Eating"]
+		},
+		{
+			"type": "radio",
+			"label": "Are you a tax payer",
+			"options": ["Yes", "No"]
+		}
+		
+	]
+}
