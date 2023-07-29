@@ -1,10 +1,10 @@
 
-import FileRenderer from './components/FileRenderer';
+import EntryPage from './components/EntryPage';
 
 function App() {
   return (
     <div className="container">
-      <FileRenderer/>
+      <EntryPage/>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+{
+	"title": "Education Details",
+	"content": [{
+			"type": "textbox",
+			"label": "Matriculation School"
+		},
+		{
+			"type": "date",
+			"label": "Passing year for Matriculation"
+		},
+        {
+			"type": "textbox",
+			"label": "Inter College"
+		},
+		{
+			"type": "date",
+			"label": "Passing year for Inter"
+		}
+		
+	]
+}

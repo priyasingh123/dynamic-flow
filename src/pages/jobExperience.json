@@ -1,0 +1,21 @@
+{
+	"title": "Job Experience",
+	"content": [{
+			"type": "textbox",
+			"label": "Role"
+		},
+		{
+			"type": "textbox",
+			"label": "Name of Company"
+		},
+        {
+			"type": "date",
+			"label": "Start Date"
+		},
+		{
+			"type": "date",
+			"label": "End Date"
+		}
+		
+	]
+}

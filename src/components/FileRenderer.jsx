@@ -1,17 +1,17 @@
-import data from '../pages/personalInfo.json';
 import RenderComponent from './RenderComponent';
 import Footer from '../components/Footer';
 import ReviewPage from './ReviewPage';
 import {useState} from 'react';
 
-const FileRenderer = () => {
+const FileRenderer = (props) => {
     //Object.entries convert Json Object into javascript array
-    const formElements = data.content ? Object.entries(data.content) : []
+    console.log (props.page)
+    const formElements = props.page ?? []
 
     //parse over formElements and store in state
     let formData = {}
     formElements.map ((element) => {
-        return formData[element[1].label] = ''
+        return formData[element.label] = ''
     })
 
 
@@ -22,11 +22,11 @@ const FileRenderer = () => {
     return (
         <>
             <div className='container' style={{width: '80%'}}>
-                <h1>{pageStatus === 'review' ? `${data.title} - Review`: pageStatus === 'entry' ? `${data.title}`:''} </h1>
+                <h1>{pageStatus === 'review' ? `${props.title} - Review`: pageStatus === 'entry' ? `${props.title}`:''} </h1>
                 {pageStatus === 'entry' && 
                 <div className='row '>
                     {formElements?.map((element, index) => <div key={index} className="my-3">
-                        <RenderComponent key={element[0]} element={element[1]} formValues={formValues} setFormValues={setFormValues} />
+                        <RenderComponent key={index} element={element} formValues={formValues} setFormValues={setFormValues} />
                     </div>
                     )}
                     <Footer reviewStatus={pageStatus} setPageStatus={setPageStatus}/>
@@ -36,7 +36,7 @@ const FileRenderer = () => {
                 
                 <div className='row align-items-center'>
                     {formElements?.map((element, index) => <div key={index} className="my-3">
-                        <ReviewPage key={element[0]} element={element[1]} formValues={formValues} />
+                        <ReviewPage key={index} element={element} formValues={formValues} />
                     </div>
                     )}
                 <Footer reviewStatus={pageStatus} setPageStatus={setPageStatus}/>
